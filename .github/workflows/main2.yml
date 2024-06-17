@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main  # 在 main 分支上进行推送时触发
+      - main  # 在 main 分支上进行推送时触发 
   schedule:
     - cron: '00 16 * * *'  # 每天凌晨 12 点执行
 
@@ -22,7 +22,7 @@ jobs:
           python-version: '3.11.8'
 
       - name: install
-        run: pip install requests
+        run: pip install requests curl_cffi
 
       - name: run
         env:
